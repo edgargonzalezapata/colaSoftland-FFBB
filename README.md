@@ -1,45 +1,111 @@
-# Cola Softland FFBB
+# Generador CSV Softland - Feria Bio Bio
 
-A Windows Forms application for generating CSV files compatible with Softland ERP system. This application handles various types of transactions including advances, checks, and sales payments.
+Aplicación Windows Forms desarrollada para la Feria Bio Bio que genera archivos CSV compatibles con el sistema ERP Softland. Esta herramienta automatiza el procesamiento de diferentes tipos de transacciones financieras, incluyendo pagos anticipados, cheques y ventas.
 
-## Features
+## Características Principales
 
-- Processes different types of payment transactions
-- Generates CSV files in Softland-compatible format
-- Handles check payments and advance payments
-- Supports multiple document types (LF, FC)
-- Manages transaction correlatives
-- Error handling and validation
+- Generación automática de archivos CSV compatibles con Softland
+- Procesamiento de múltiples tipos de transacciones:
+  - Pagos directos
+  - Pagos anticipados
+  - Pagos con cheques
+  - Pagos de ventas
+- Soporte para diferentes tipos de documentos:
+  - Liquidación de Facturas (LF)
+  - Facturas de Compra (FC)
+  - Notas de Crédito
+- Gestión de correlativos automática
+- Validación de datos y manejo de errores robusto
+- Interfaz de usuario intuitiva y fácil de usar
 
-## Requirements
+## Requisitos del Sistema
 
-- Windows OS
-- .NET Framework
-- Visual Studio (for development)
-- SQL Server database
+- Sistema Operativo: Windows
+- .NET Framework 4.5 o superior
+- Visual Studio 2019 o superior (para desarrollo)
+- SQL Server 2012 o superior
+- Acceso al sistema Softland ERP
 
-## Setup
+## Configuración Inicial
 
-1. Clone the repository
-2. Open the solution in Visual Studio
-3. Restore NuGet packages if needed
-4. Build the solution
-5. Configure the database connection string
-6. Run the application
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/edgargonzalezapata/colaSoftland-FFBB.git
+   ```
 
-## Usage
+2. Abrir la solución `colaSoftland.sln` en Visual Studio
 
-The application processes transactions and generates CSV files that can be imported into Softland ERP system. It supports various transaction types and handles different payment scenarios including:
+3. Restaurar paquetes NuGet si es necesario
 
-- Direct payments
-- Advance payments
-- Check payments
-- Sales payments
+4. Configurar la cadena de conexión a la base de datos:
+   - Ubicar el archivo `App.config`
+   - Modificar la cadena de conexión con los datos de su servidor
 
-## Contributing
+5. Compilar la solución
 
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a new Pull Request 
+6. Ejecutar la aplicación
+
+## Uso
+
+### Procesamiento de Transacciones
+
+1. **Pagos Directos**
+   - Seleccionar el tipo de documento
+   - Ingresar los datos del pago
+   - Generar el archivo CSV
+
+2. **Pagos con Cheques**
+   - Ingresar datos del cheque
+   - Validar información bancaria
+   - Procesar el pago
+
+3. **Pagos Anticipados**
+   - Registrar el anticipo
+   - Asociar a documentos futuros
+   - Generar comprobantes
+
+4. **Exportación a Softland**
+   - Verificar datos generados
+   - Exportar archivo CSV
+   - Validar en sistema Softland
+
+## Estructura del Proyecto
+
+- `Controller/`: Lógica de negocio y procesamiento
+- `Model/`: Clases y modelos de datos
+- `View/`: Formularios e interfaces de usuario
+- `Conection/`: Manejo de conexiones a base de datos
+
+## Mantenimiento
+
+### Respaldo de Datos
+- Realizar copias de seguridad periódicas de la base de datos
+- Mantener respaldo de los archivos CSV generados
+
+### Actualizaciones
+- Verificar periódicamente nuevas versiones
+- Actualizar según cambios en Softland
+
+## Soporte
+
+Para reportar problemas o solicitar nuevas funcionalidades:
+1. Abrir un nuevo Issue en GitHub
+2. Describir detalladamente el problema o sugerencia
+3. Incluir capturas de pantalla si es necesario
+
+## Contribuir
+
+1. Hacer Fork del repositorio
+2. Crear una rama para su funcionalidad (`git checkout -b feature/NuevaFuncionalidad`)
+3. Hacer Commit de sus cambios (`git commit -m 'Agregar nueva funcionalidad'`)
+4. Hacer Push a la rama (`git push origin feature/NuevaFuncionalidad`)
+5. Crear un Pull Request
+
+## Licencia
+
+Este proyecto es software propietario de Feria Bio Bio. Todos los derechos reservados.
+
+## Autores
+
+- Edgar González - Desarrollo Principal
+- Feria Bio Bio - Propietario 
